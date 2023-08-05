@@ -7,10 +7,13 @@ from . import views
 urlpatterns = [
     path("", views.index,name="PssappIndex"),
     path("about/", views.about,name="AboutUs"),
-    path("training/", views.training,name="Training"),
-    path("ourstrength/", views.ourstrength,name="Ourstrength"),
-    path("welfare/", views.welfare,name="Welfare"),
+    path("ourprocesses/", views.ourprocesses,name="OurProcesses"),
+    path("valuedpartners/", views.valuedpartners,name="ValuedPartners"),
     path("contact/", views.contact,name="ContactUs"),
+    path("careers/", views.careers,name="Careers"),
     path("emplogin/", views.emplogin,name="Emplogin"),
     # path("thankyou/", views.thankyou,name="thankyou")
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
