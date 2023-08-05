@@ -4,14 +4,14 @@ from django.http import HttpResponse
 def index(request):
     return render(request,"pssapp/index.html")
 def about(request):
-    return HttpResponse("This is about us page")
+    return render(request,"pssapp/about.html")
 def ourprocesses(request):
-    return HttpResponse("This is Our processes page")
+    return render(request,"pssapp/ourprocesses.html")
 def valuedpartners(request):
-    return HttpResponse("This is valuedpartners")
+    return render(request,"pssapp/valuedpartners.html")
 def contact(request):
-    return HttpResponse("This is contact us page")
+    return render(request,"pssapp/contact.html")
 def careers(request):
-    return HttpResponse("This is Careers page")
-def emplogin(request):
-    return HttpResponse("This is employee login page")
+    return render(request,"pssapp/careers.html")
+def login(request):
+    return render(request,"pssapp/login.html")

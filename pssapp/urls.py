@@ -11,7 +11,7 @@ urlpatterns = [
     path("valuedpartners/", views.valuedpartners,name="ValuedPartners"),
     path("contact/", views.contact,name="ContactUs"),
     path("careers/", views.careers,name="Careers"),
-    path("emplogin/", views.emplogin,name="Emplogin"),
+    path("login/", views.login,name="Login"),
     # path("thankyou/", views.thankyou,name="thankyou")
 ]
 
