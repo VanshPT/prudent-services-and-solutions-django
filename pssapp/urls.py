@@ -11,7 +11,6 @@ urlpatterns = [
     path("valuedpartners/", views.valuedpartners,name="ValuedPartners"),
     path("contact/", views.contact,name="ContactUs"),
     path("careers/", views.careers,name="Careers"),
-    path("login/", views.login,name="Login"),
     # path("thankyou/", views.thankyou,name="thankyou")
 ]
 

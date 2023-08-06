@@ -13,5 +13,4 @@ def contact(request):
     return render(request,"pssapp/contact.html")
 def careers(request):
     return render(request,"pssapp/careers.html")
-def login(request):
-    return render(request,"pssapp/login.html")
+

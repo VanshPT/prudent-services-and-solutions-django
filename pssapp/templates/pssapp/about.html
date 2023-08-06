@@ -1,5 +1,171 @@
 {% extends 'pssapp/basic.html' %}
-{% block title %}{% endblock %}
-{% block css %}{% endblock %}
-{% block body %}{% endblock %}
-{% block js %}{% endblock %}
+{% block title %}About | Prudent Services and Solutions{% endblock %}
+{% block css %}
+.sec1{
+    margin-left:2rem;
+    margin-bottom:5rem;
+}
+.sec1 h2{
+    font-family: 'Playfair Display', serif;
+    Font-weight:bold;
+    color:rgb(57, 57, 120);
+    border-bottom:3px solid rgb(161, 65, 65);
+    margin-right:2rem;
+    margin-top:4rem;
+}
+.vision h5{
+    color:rgb(57, 57, 120);
+
+}
+.mission h5{
+    color:rgb(57, 57, 120);
+}
+.sec2{
+    margin-left:2rem;
+}
+.sec2 h4{
+    color:rgb(57, 57, 120);
+    text-decoration:underline;
+}
+.sec3{
+    margin-left:2rem;
+}
+.sec3 h4{
+    color:rgb(57, 57, 120);
+    text-decoration:underline;
+}
+.card-flex{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+.linkimg{
+    font-size:5rem;
+    margin-bottom:1rem;
+    margin-top:1rem;
+    color:rgb(161, 65, 65);
+}
+.margg1{
+    margin: 3rem 0rem;
+}
+{% endblock %}
+{% block body %}
+<section class="sec1">
+    <h2>
+        About Prudent
+    </h2>
+    <div class="vision">
+        <h5>Our Vision</h5>
+        <p>To emerge as trusted security solution partner for complete security solutions
+            from man guarding services to electronic & cyber security services in India.
+            </p>
+    </div>
+    <div class="mission">
+        <h5>Our Mission</h5>
+        <p>To strive towards delighting our employees, partners & customers by providing
+            committed, ethical, cost effective and efficient services by maintaining a safe &
+            secure environment with constantly adding values through innovation and
+            upgradation of our skills in our services .</p>
+    </div>
+</section>
+<section class="sec2">
+    <h4>Prudent Services and Solutions</h4>
+    <p>Prudent is in the business of securing people & premises with man guarding
+        services and believes to provide quality services to their clients and employees
+        and certified ISO 9001:2015 on Quality Management System.</p>
+    <p>Our business is partnering with various commercials,
+        Industrials, residential and corporates in urban and remote
+        sites with a diversified area of Gujarat, Daman & Diu and
+        Dadra and Nagar Haveli.</p>
+    <p>We are aspiring to expand our operations into Unskilled &
+        Skilled manpower management, facility management, electronic
+        surveillance services in near future.</p>
+</section>
+<section class="sec3">
+    <h4>Why Prudent?</h4>
+    <span>Our values helps us to be responsible towards our customer & employees.
+    </span>
+    <div class="container margg1">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card mb-3 card-flex">
+                <i class="fa-sharp fa-solid fa-people-group linkimg"></i>
+              <div class="card-body">
+                <strong>BEST PEOPLE</strong>
+                <p class="card-text">
+                    We recruit the 
+                    best of the people 
+                    and groom them to 
+                    succeed .</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 col-sm-12 ">
+            <div class="card mb-3 card-flex">
+                <i class="fa-sharp fa-solid fa-scale-balanced linkimg"></i>
+              <div class="card-body">
+                <strong>INTEGRITY</strong>
+                <p class="card-text">We can always be trusted to consistently do the right thing.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card mb-3 card-flex">
+                <i class="fa-sharp fa-solid fa-person-rays linkimg"></i>
+              <div class="card-body">
+                <strong>CUSTOMER FOCUS</strong>
+                <p class="card-text">We collaborate as a cohesive team player aligned with the client's goals. .</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card mb-3 card-flex">
+                <i class="fa-sharp fa-solid fa-face-smile-beam linkimg"></i>
+              <div class="card-body">
+                <strong>TEAM PLAYER</strong>
+                <p class="card-text">We collaborate 
+                    the benefit of our 
+                    customers & 
+                    employees .</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card mb-3 card-flex">
+                <i class="fa-sharp fa-solid fa-file-lines linkimg"></i>
+              <div class="card-body">
+                <strong>COMPLIANCE</strong>
+                <p class="card-text">We adhere 100% 
+                    statutory 
+                    compliances as 
+                    per the Govt. Laws .</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card mb-3 card-flex">
+                <i class="fa-sharp fa-solid fa-arrow-up-right-dots linkimg"></i>
+              <div class="card-body">
+                <strong>PERFORMANCE</strong>
+                <p class="card-text">We improve our 
+                    performance 
+                    based on client 
+                    feedbacks .</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+</section>
+{% endblock %}
+{% block js %}
+
+{% endblock %}
