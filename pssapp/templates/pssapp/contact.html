@@ -1,11 +1,84 @@
 {% extends 'pssapp/basic.html' %}
 {% block title %}Contact | Prudent Services and Solutions{% endblock %}
 {% block css %}
-
+.sec1{
+    margin-left:2rem;
+    margin-bottom:5rem;
+    display:flex;
+    justify-content:center;
+}
+.sec1 div h2{
+    font-family: 'Playfair Display', serif;
+    Font-weight:bold;
+    color:rgb(57, 57, 120);
+    border-bottom:3px solid rgb(161, 65, 65);
+    margin-right:2rem;
+    margin-top:4rem;
+}
+.sec2{
+    margin-left:6rem;
+    margin-right:6rem;
+    margin-bottom:5rem;
+}
+#sub{
+    font-size:1rem;
+    background-color: rgb(161, 65, 65);
+    margin-top: 1.5rem;
+    color:white;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    padding-left:2rem;
+    padding-right:2rem;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+    border-radius:3px;
+}
+#sub:hover{
+    background-color: white;
+    color:rgb(161, 65, 65);
+}
 {% endblock %}
 {% block body %}
-
+<section class="sec1">
+    <div>
+        <h2 id="maintxt">
+            
+        </h2>
+      </div>
+  </section>
+<form class="sec2" method="post" action="/pssapp/getback/">{% csrf_token %}
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Your Name</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="name..." name="Name">
+      </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput2" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com" name="Email">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput3" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="exampleFormControlInput3" placeholder="+91 XXXXX XXXXX" name="Phone">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Send us a Message</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="Message"></textarea>
+      </div>
+      <div>
+        <button id="sub" type="submit">Submit</button>
+      </div>
+</form>
 {% endblock %}
 {% block js %}
+var string = "Contact Us";
+var i = 0;
 
+function typeEffect() {
+    if (i < string.length) {
+        $("#maintxt").html($("#maintxt").html() + string[i]);
+        i++;
+    } else {
+        clearInterval(typingInterval);
+    }
+}
+
+var typingInterval = setInterval(typeEffect, 100); 
 {% endblock %}

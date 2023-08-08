@@ -1,0 +1,70 @@
+{% extends 'pssapp/basic.html' %}
+{% block title %}About | Prudent Services and Solutions{% endblock %}
+{% block css %}
+
+#sub{
+    font-size:1rem;
+    background-color: rgb(161, 65, 65);
+    margin-top: 1.5rem;
+    color:white;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+    padding-left:2rem;
+    padding-right:2rem;
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+    border-radius:3px;
+}
+#sub:hover{
+    background-color: white;
+    color:rgb(161, 65, 65);
+}
+#lottieAnimation{
+    width:250px;
+}
+.sec1{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:3rem;
+}
+.sec1 span{
+    font-size:4rem;
+    font-weight:bold;
+    color:rgb(57, 57, 120);
+}
+.sec1 p{
+    font-weight:bold;
+    font-size:2rem;
+}
+{% endblock %}
+{% block body %}
+
+<section class="sec1">
+    <div id="lottieAnimation"></div>
+    <span>Thank You for your message</span>
+    <p>Our Team will get Back to You Soon....</p>
+    <button id="sub">Go to Home</button>
+</section>
+{% endblock %}
+{% block js %}
+$('#sub').click(function(){
+    window.location.href = "/pssapp/";
+})
+<!-- Include Lottie Library -->
+
+var animationContainer = document.getElementById("lottieAnimation");
+
+  var loopCount = 0; 
+
+  var animation = lottie.loadAnimation({
+    container: animationContainer,
+    renderer: "svg",
+    loop: false, 
+    autoplay: true,
+    path: "https://lottie.host/aa8c1c27-b302-4484-9fe1-e7f35fb65c85/ohWVGcweqM.json",
+    onComplete: function (anim) {
+        anim.goToAndStop(anim.totalFrames - 1, true); 
+      }
+  });
+{% endblock %}

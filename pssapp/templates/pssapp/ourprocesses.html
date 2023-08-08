@@ -29,38 +29,56 @@
 #sec2{
     marging-top:1rem;
     margin-left:2rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
-#sec2 h4{
+#sec2 div h4{
     margin-top:1rem;
     color:rgb(57, 57, 120);
     text-decoration:underline;
 }
-#sec2 strong{
+#sec2 img{
+    margin:0 4rem;
+}
+#sec2 div strong{
     margin-top:2rem;
 }
 #sec3{
     margin-left:2rem;
     marging-top:1rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
-#sec3 h4{
+#sec3 div h4{
     marging-top:1rem;
     color:rgb(57, 57, 120);
     text-decoration:underline;
 }
-#sec3 strong{
+#sec3 div strong{
     margin-top:2rem;
+}
+#sec3 img{
+    margin:0 4rem;
 }
 #sec4{
     margin-left:2rem;
     marging-top:1rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
-#sec4 h4{
+#sec4 div h4{
     marging-top:1rem;
     color:rgb(57, 57, 120);
     text-decoration:underline;
 }
-#sec4 strong{
+#sec4 div strong{
     margin-top:2rem;
+}
+#sec4 img{
+    margin:0 4rem;
 }
 #sec5{
     margin-left:2rem;
@@ -174,8 +192,8 @@
 {% endblock %}
 {% block body %}
 <section id="sec1">
-    <h2>
-        Our Processes
+    <h2 id="maintxt">
+        
     </h2>
     <!-- <div class="vision">
         <h5>Our Vision</h5>
@@ -192,7 +210,8 @@
     </div> -->
 </section>
 <section id="sec2">
-    <h4>Man Guarding</h4>
+    <div>
+        <h4>Man Guarding</h4>
     <strong>HIRING/RECRUITMENT PROCESSES</strong>
     <p>We select candidates through a stringent selection 
         process that includes references & background 
@@ -204,10 +223,12 @@
         requirements. Our training program is flexible and is 
         customized to meet individual client needs.
         </p>
-    
+    </div>
+    <img src="/media/profile_pics/image-990.jpg" alt="" width="400px">
 </section>
 <section id="sec3">
-    <h4>Training & Rewards</h4>
+    <div>
+        <h4>Training & Rewards</h4>
     <p>Prudent provides different types of customized training to their employees
         to meet the site-specific, region specific & role specific requirements, the
         module of the training Includes the
@@ -234,41 +255,46 @@
             <li>Threat Perceptions</li>
         </ul>
         </p>
+    </div>
+    <img src="/media/profile_pics/image-989.png" alt="" width="400px">
     
 </section>
 <section id="sec4">
-    <h4>Health & Safety</h4>
+    <div>
+        <h4>Health & Safety</h4>
     
-    <p>Along with business growth, Prudent strongly believe
-        to maintain health & safety for their employees at all
-        levels. Feeling safe at work is a top priority for overall
-        job satisfaction and employee retention. To maintain a
-        safe workplace Prudent also provides safety and
-        security training.</p>
-    <strong>1.) TOOL BOX TALK</strong>
-    <p>Safety toolbox talks are short 5 - 15
-        minutes safety talks & Videos that refresh
-        knowledge. And they’re an excellent way to keep
-        safety front of mind for employees. It is done during
-        visits by Prudent Officials regularly at sites.
-        
+        <p>Along with business growth, Prudent strongly believe
+            to maintain health & safety for their employees at all
+            levels. Feeling safe at work is a top priority for overall
+            job satisfaction and employee retention. To maintain a
+            safe workplace Prudent also provides safety and
+            security training.</p>
+        <strong>1.) TOOL BOX TALK</strong>
+        <p>Safety toolbox talks are short 5 - 15
+            minutes safety talks & Videos that refresh
+            knowledge. And they’re an excellent way to keep
+            safety front of mind for employees. It is done during
+            visits by Prudent Officials regularly at sites.
+            
+            </p>
+        <strong>2.) SAFETY WALK AND TALK(SWAT)</strong>
+        <p>Safety walks are
+            just a observational walks where we find hazard
+            and risk for employee at work place to prevent
+            minor/major accidents. Done by Prudent officials on
+            monthly basis.
+                
         </p>
-    <strong>2.) SAFETY WALK AND TALK(SWAT)</strong>
-    <p>Safety walks are
-        just a observational walks where we find hazard
-        and risk for employee at work place to prevent
-        minor/major accidents. Done by Prudent officials on
-        monthly basis.
-            
-    </p>
-    <strong>3.) HAZARD REPORTING</strong>
-    <p> We keep identifying hazards
-        from sites to avoid the incidents and major/minor
-        accidents at workplace. Priority closure of hazard
-        with the help of management and employees
-        makes the work place safer.
-            
-    </p>
+        <strong>3.) HAZARD REPORTING</strong>
+        <p> We keep identifying hazards
+            from sites to avoid the incidents and major/minor
+            accidents at workplace. Priority closure of hazard
+            with the help of management and employees
+            makes the work place safer.
+                
+        </p>
+    </div>
+    <img src="/media/profile_pics/image-988.jpg" alt="" width="400px">
 </section>
 <section id="sec5">
     <h4>Guiding Principles</h4>
@@ -346,4 +372,18 @@
 </section>
 
 {% endblock %}
-{% block js %}{% endblock %}
+{% block js %}
+var string = "Our Processes";
+var i = 0;
+
+function typeEffect() {
+    if (i < string.length) {
+        $("#maintxt").html($("#maintxt").html() + string[i]);
+        i++;
+    } else {
+        clearInterval(typingInterval);
+    }
+}
+
+var typingInterval = setInterval(typeEffect, 100); 
+{% endblock %}

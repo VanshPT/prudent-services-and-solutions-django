@@ -1,0 +1,83 @@
+{% extends 'pssapp/basic.html' %}
+{% block title %}About | Prudent Services and Solutions{% endblock %}
+{% block css %}
+.sec1{
+    margin-left:2rem;
+    margin-bottom:5rem;
+    display:flex;
+    justify-content:center;
+}
+.sec1 div h2{
+    font-family: 'Playfair Display', serif;
+    Font-weight:bold;
+    color:rgb(57, 57, 120);
+    border-bottom:3px solid rgb(161, 65, 65);
+    margin-right:2rem;
+    margin-top:4rem;
+}
+#sec2{
+    margin:4.5rem;
+}
+#sec2 span{
+    font-size:2rem;
+    margin-bottom:4.5rem;
+}
+.details-button {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    background-color:rgb(161, 65, 65);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    border:2px solid rgb(161, 65, 65);
+    transition:background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+.details-button:hover{
+    color:rgb(161, 65, 65);
+    border: 2px solid rgb(161, 65, 65);
+    background-color:white;
+}
+{% endblock %}
+{% block body %}
+<section class="sec1">
+  <div>
+      <h2>
+          Application Form
+      </h2>
+      
+    </div>
+    
+</section>
+<section id="sec2">
+    <span><strong>Applying for: </strong>{{job}}</span>
+    <form method="post" enctype="multipart/form-data" action="/pssapp/getback/">{% csrf_token %} 
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="Name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="Email" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="tel" class="form-control" id="phone" name="Phone" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="resume" class="form-label">Upload your Resume( .pdf, .doc, .docx accepted only)</label>
+            <input type="file" class="form-control" id="resume" name="Resume" accept=".pdf,.doc,.docx" required>
+        </div>
+
+        <button type="submit" class="details-button">Submit</button>
+    </form>
+</section>
+{% endblock %}
+{% block js %}
+
+{% endblock %}

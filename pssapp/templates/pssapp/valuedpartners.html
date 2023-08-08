@@ -19,8 +19,8 @@
 {% endblock %}
 {% block body %}
 <section class="sec1">
-    <h2>
-        Valued Partners
+    <h2 id="maintxt">
+        
     </h2>
 </section>
 <section id="sec2">
@@ -80,4 +80,18 @@
     
 </section>
 {% endblock %}
-{% block js %}{% endblock %}
+{% block js %}
+var string = "Valued Partners";
+var i = 0;
+
+function typeEffect() {
+    if (i < string.length) {
+        $("#maintxt").html($("#maintxt").html() + string[i]);
+        i++;
+    } else {
+        clearInterval(typingInterval);
+    }
+}
+
+var typingInterval = setInterval(typeEffect, 100); 
+{% endblock %}

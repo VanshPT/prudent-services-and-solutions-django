@@ -4,14 +4,19 @@
 .sec1{
     margin-left:2rem;
     margin-bottom:5rem;
+    display:flex;
+    justify-content:center;
 }
-.sec1 h2{
+.sec1 div h2{
     font-family: 'Playfair Display', serif;
     Font-weight:bold;
     color:rgb(57, 57, 120);
     border-bottom:3px solid rgb(161, 65, 65);
     margin-right:2rem;
     margin-top:4rem;
+}
+.sec1 img{
+  margin:3rem 4rem;
 }
 .vision h5{
     color:rgb(57, 57, 120);
@@ -52,10 +57,11 @@
 {% endblock %}
 {% block body %}
 <section class="sec1">
-    <h2>
-        About Prudent
-    </h2>
-    <div class="vision">
+  <div>
+      <h2 id="abttxt">
+          
+      </h2>
+      <div class="vision">
         <h5>Our Vision</h5>
         <p>To emerge as trusted security solution partner for complete security solutions
             from man guarding services to electronic & cyber security services in India.
@@ -68,6 +74,8 @@
             secure environment with constantly adding values through innovation and
             upgradation of our skills in our services .</p>
     </div>
+    </div>
+    <img src="/media/profile_pics/image-000.jpg" alt="" width="325px">
 </section>
 <section class="sec2">
     <h4>Prudent Services and Solutions</h4>
@@ -167,5 +175,18 @@
 </section>
 {% endblock %}
 {% block js %}
+var string = "About Prudent";
+var i = 0;
+
+function typeEffect() {
+    if (i < string.length) {
+        $("#abttxt").html($("#abttxt").html() + string[i]);
+        i++;
+    } else {
+        clearInterval(typingInterval);
+    }
+}
+
+var typingInterval = setInterval(typeEffect, 100); 
 
 {% endblock %}

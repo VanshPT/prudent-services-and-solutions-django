@@ -1,5 +1,189 @@
 {% extends 'pssapp/basic.html' %}
 {% block title %}Careers | Prudent Services and Solutions{% endblock %}
-{% block css %}{% endblock %}
-{% block body %}{% endblock %}
-{% block js %}{% endblock %}
+{% block css %}
+#sec1{
+    margin-left:2rem;
+    margin-bottom:5rem;
+    display:flex;
+    justify-content:center;
+}
+#sec1 div h2{
+    font-family: 'Playfair Display', serif;
+    Font-weight:bold;
+    color:rgb(57, 57, 120);
+    border-bottom:3px solid rgb(161, 65, 65);
+    margin-right:2rem;
+    margin-top:4rem;
+}
+#sec2{
+    margin-top:1rem;
+    margin-bottom:7rem;
+    margin-left:4.5rem;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    width: 90%; 
+    height: 400px; 
+    background-image: url('/media/profile_pics/image-987.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    padding:1rem;
+    border-radius:10px;
+    color:white
+}
+#sec2 div{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    
+}
+#sec2 img{
+    padding:2rem;
+}
+.maintxt strong{
+    font-size:1.2rem;
+    margin-bottom:2rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.card {
+    flex: 1;
+    min-width: 300px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    position: relative;
+}
+
+.details-button {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    background-color:rgb(161, 65, 65);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    border:2px solid rgb(161, 65, 65);
+    transition:background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+.details-button:hover{
+    color:rgb(161, 65, 65);
+    border: 2px solid rgb(161, 65, 65);
+    background-color:white;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .card {
+        min-width: auto;
+    }
+}
+#sec3{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:7rem;
+}
+#sec3 h3{
+    color:rgb(161, 65, 65);
+    text-decoration:underline;
+}
+#sec3 h4{
+    color:rgb(57, 57, 120);
+}
+#sec4{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:7rem;
+}
+#sec4 h3{
+    color:rgb(161, 65, 65);
+    text-decoration:underline;
+    margin-bottom:2rem;
+}
+
+.small{
+    font-size:0.9rem;
+    font-weight:italic;
+    color:grey;
+}
+{% endblock %}
+{% block body %}
+<section id="sec1">
+    <div>
+        <h2 id="maintxt">
+            
+        </h2>
+      </div>
+</section>
+<section id="sec2">
+    <div>
+        <p class="maintxt"><strong>Welcome to Prudent Services and Solutions, a leading security solutions provider dedicated to safeguarding businesses and communities across India. Our commitment to excellence, integrity, and unwavering dedication to protecting what matters most sets us apart. Join our dynamic team and become a crucial part of our mission to create safer environments.</strong></p>
+        <p><strong>Our Vision:</strong>To emerge as trusted security solution partner for complete security solutions
+            from man guarding services to electronic & cyber security services in India.</p>
+        <p><strong>Our Mission:</strong>To strive towards delighting our employees, partners & customers by providing
+            committed, ethical, cost effective and efficient services by maintaining a safe &
+            secure environment with constantly adding values through innovation and
+            upgradation of our skills in our services .</p>
+    </div>
+    <img src="/media/profile_pics/image-986.jpg" alt="" width="400px">
+</section>
+<section id="sec3">
+    <h3>Job Listings</h3>
+    <div class="card-container">
+        {% for i in jobs %}
+        <div class="card">
+            <h4>{{i.job_name}}</h4>
+            <p><strong>Location: </strong>{{i.place}}</p>
+            <form action="/pssapp/jobappliction/" method="post">{% csrf_token %}
+                <input type="hidden" name="jobname" value="{{i.job_name}}" >
+                <button type="submit" class="details-button">Fill Application</button>
+            </form>
+            
+            <p class="small">Fill Application to hear from us and know more details about job description.</p>
+        </div>
+        {% endfor %}
+        
+    </div>
+</section>
+<section id="sec4">
+    <h3>Benifits and Perks</h3>
+    <ul>
+        <li>Competitive salary packages</li>
+        <li>Timely Payment of Salary on 7th date of every month</li>
+        <li>Health insurance coverage</li>
+        <li>Uniforms and equipment provided</li>
+        <li>Ongoing training and skill development</li>
+    </ul>
+</section>
+
+{% endblock %}
+{% block js %}
+var string = "Build Your Career With Us";
+var i = 0;
+
+function typeEffect() {
+    if (i < string.length) {
+        $("#maintxt").html($("#maintxt").html() + string[i]);
+        i++;
+    } else {
+        clearInterval(typingInterval);
+    }
+}
+
+var typingInterval = setInterval(typeEffect, 100); 
+{% endblock %}
