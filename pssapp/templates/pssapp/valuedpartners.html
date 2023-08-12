@@ -13,8 +13,25 @@
     margin-right:2rem;
     margin-top:4rem;
 }
+.margg1{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
 .margg1 img{
     margin:1rem 4rem;
+}
+@media (max-width:765px){
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        width: 100%;
+        padding-right: var(--bs-gutter-x,.75rem);
+        padding-left: var(--bs-gutter-x,);
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .margg1 div{
+        margin-right:50px;
+    }
 }
 {% endblock %}
 {% block body %}
@@ -27,7 +44,7 @@
     <div class="container sec">
         <div class="row">
             <div class="col-md-12">
-                <div class="d-flex flex-wrap justify-content-center margg1">
+                <div class=" margg1">
                     <div class="col-md-2 col-sm-4 col-6 mb-4">
                         <img src="/media/profile_pics/image-239.png" class="img-fluid" alt="Image 1">
                     </div>

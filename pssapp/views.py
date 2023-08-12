@@ -23,22 +23,30 @@ def getback(request):
 
 
         filler_name=request.POST.get('Name','')
+        filler_jobname=request.POST.get('JobName','')
         filler_email=request.POST.get('Email','')
         filler_phone=request.POST.get('Phone','')
         filler_resume=request.FILES.get('Resume','')
         print(filler_resume)
-        jobApplications=JobApplications(Name=filler_name,Email=filler_email,PhoneNo=filler_phone,Resume=filler_resume)
+        jobApplications=JobApplications(Name=filler_name,Applied_For=filler_jobname,Email=filler_email,PhoneNo=filler_phone,Resume=filler_resume)
         jobApplications.save()
     return render(request,"pssapp/getback.html")
 def careers(request):
-    jobsavail=JobDetail.objects.values("job","place")
-    jobname=JobEntry.objects.values("sr_no","job_name")
-    for i,j in zip(jobsavail,jobname):
-        if i['job'] == j['sr_no']:
-            i['job_name'] = j['job_name']
-    print(jobsavail)
-    params={'jobs':jobsavail}
-    return render(request,"pssapp/careers.html",params)
+    jobsavail = JobDetail.objects.values("job", "place")
+    jobname = JobEntry.objects.values("sr_no", "job_name")
+
+    # Create a dictionary to map sr_no to job_name
+    jobname_mapping = {job['sr_no']: job['job_name'] for job in jobname}
+
+    # Iterate through jobsavail and add the 'job_name' key
+    for job in jobsavail:
+        job_id = job['job']
+        if job_id in jobname_mapping:
+            job['job_name'] = jobname_mapping[job_id]
+
+    params = {'jobs': jobsavail}
+    return render(request, "pssapp/careers.html", params)
+
 def jobseeker(request):
     if request.method == 'POST':
         job=request.POST.get('jobname','')

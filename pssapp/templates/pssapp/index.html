@@ -9,10 +9,10 @@
 .margg1{
     padding:3rem!important;
 }
-@media (min-width: 1200px)
-.container, .container-lg, .container-md, .container-sm, .container-xl {
-    max-width: 1100px;
-}
+
+
+
+
 
 .sec1{
     background-color:rgb(57, 57, 120);
@@ -44,7 +44,7 @@
   margin-bottom:4rem;
   background-color:grey;
 }
-.sec3 span{
+.sec3 div span{
   font-size:1.8rem;
   font-family: 'Playfair Display', serif;
   color:yellow;
@@ -53,9 +53,174 @@
   padding:10px;
   max-height:100px;
 }
+@media (max-width:1057px){
+  .gitl1{
+    font-size:1.7rem;
+    color:white;
+    font-family: 'Playfair Display', serif;
+}
+}
+@media (max-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 1100px;
+  }
+}
+@media (max-width: 992px) {
+  #carouselExample{
+    display:none;
+  }
+  #mainslider{
+    background-image: url('/media/profile_pics/image-018.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    border-radius:2px;
+    color:white;
+    height:350px;
+    margin: 1rem;
+  }
+  #flexbx{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  .sec3 div span{
+    font-size:1rem;
+    font-family: 'Playfair Display', serif;
+    color:yellow;
+  }
+  .imgsze2 img{
+    padding:10px;
+    max-height:80px;
+  }
+}
+@media (max-width: 768px) {
+  .sec1{
+    background-color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:1rem;
+}
+.gitl1{
+  font-size:1.5rem;
+  background-color:rgb(57, 57, 120);
+  padding:2.5rem 10.5rem;
+  font-family: 'Playfair Display', serif;
+}
+.gitl2{
+  background-color:rgb(161, 65, 65);
+  padding-top:1rem;
+  padding-bottom:1rem;
+  padding-left:4rem;
+  padding-right:4rem;
+  border-radius:10px;
+  margin-top:1rem;
+}
+.sec4{
+  margin-left:2rem;
+}
+}
+
+@media (max-width:640px){
+  .sec1{
+    background-color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:1rem;
+}
+.gitl1{
+  font-size:1.5rem;
+  background-color:rgb(57, 57, 120);
+  font-family: 'Playfair Display', serif;
+  padding:2.5rem;
+  width:600px;
+}
+.gitl2{
+  background-color:rgb(161, 65, 65);
+  padding-top:1rem;
+  padding-bottom:1rem;
+  padding-left:4rem;
+  padding-right:4rem;
+  border-radius:10px;
+  margin-top:1rem;
+}
+body{
+  right:0px;
+}
+footer{
+  position:absolute;
+  right:0px;
+}
+}
+@media (max-width:640px){
+  .gitl1{
+    font-size:1.5rem;
+    background-color:white;
+    color:rgb(57, 57, 120);
+    font-family: 'Playfair Display', serif;
+    padding:0rem;
+    margin:1rem 0;
+    width:400px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+ #mainslider{
+  height:250px;
+  margin:0rem;
+ }
+ .sec3 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction:column;
+  align-items: center;
+  margin-bottom: 4rem;
+  background-color: grey;
+}
+.sec3 div span {
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  color: yellow;
+}
+.imgsze2 img {
+  padding: 10px;
+  max-height: 65px;
+}
+
+}
+@media (max-width:400px){
+  .gitl1{
+    font-size:1.2rem;
+    background-color:white;
+    color:rgb(57, 57, 120);
+    font-family: 'Playfair Display', serif;
+    padding:0rem;
+    margin:1rem 0;
+    width:400px;
+    font-weight:bold;
+  }
+  #iso{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+    margin-left:1rem;
+  }
+  #iso span{
+    margin-bottom:5px;
+  }
+  .sec4 {
+    margin-left: 0.5rem;
+}
+}
 {% endblock %}
 {% block body %}
-<div class="container margg1">
+<div id="flexbx">
+  <div id="mainslider" class="container margg1">
     <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active imgsze">
@@ -77,6 +242,9 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+
+</div>
+
 </div>
 
 <section class="sec1">
@@ -97,12 +265,12 @@
             <img src="/media/profile_pics/image-999.jpg" alt="">
             <div class="card-body">
               <h5>About Us</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Prudent is in the business of securing people & premises with man guarding
+                services and believes ...</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary abtus">Read More</button>
                 </div>
-                <small class="text-body-secondary">9 mins</small>
               </div>
             </div>
           </div>
@@ -112,12 +280,14 @@
             <img src="/media/profile_pics/image-998.jpg" alt="">
             <div class="card-body">
               <h5>Our Processes</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">We select candidates through a stringent selection 
+                process that includes references & background 
+                ...</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary ourp">Read More</button>
                 </div>
-                <small class="text-body-secondary">9 mins</small>
+                
               </div>
             </div>
           </div>
@@ -127,12 +297,12 @@
             <img src="/media/profile_pics/image-997.jpg" alt="">
             <div class="card-body">
               <h5>Valued Customers</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Prudent Services and Solutions keeps interests of their valued partners above everthing else.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary valcus">Read More</button>
                 </div>
-                <small class="text-body-secondary">9 mins</small>
+                
               </div>
             </div>
           </div>
@@ -144,7 +314,11 @@
   </div>
 </section>
 <section class="sec3">
-  <span>ISO 9001:2015 (QUALITY MANAGEMENT SYSTEM)</span>
+  <div id="iso">
+    <span>ISO 9001:2015 </span>
+    <span>(QUALITY MANAGEMENT SYSTEM)</span>
+  </div>
+  
   <div class="imgsze2">
     <img src="/media/profile_pics/image-011.jpg" alt="">
     <img src="/media/profile_pics/image-008.jpg" alt="">

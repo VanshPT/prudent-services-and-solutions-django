@@ -27,9 +27,10 @@ class JobDetail(models.Model):
     
 class JobApplications(models.Model):
     application_id=models.AutoField(primary_key=True)
-    Name=models.CharField(max_length= 100)
-    Email=models.EmailField(max_length=254)
-    PhoneNo=models.CharField(max_length=20)
+    Name=models.CharField(max_length= 100,default="")
+    Applied_For=models.CharField(max_length=300, default="")
+    Email=models.EmailField(max_length=254,default="")
+    PhoneNo=models.CharField(max_length=20,default="")
     Resume=models.FileField(upload_to='uploads/')
 
     def __str__(self):

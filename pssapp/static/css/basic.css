@@ -4,6 +4,9 @@
     align-items: center;
     background-color: rgb(57, 57, 120);
 }
+.none{
+    display: none;
+}
 .iconchange{
     color: white;
     padding-top:1px;
@@ -120,3 +123,59 @@ footer{
     top: 0;
     z-index: 1020;
 }
+@media (max-width:768px){
+    #foot1{
+        font-size:1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items:flex-start;
+        padding:2rem 0;
+        margin-left:2rem;
+    }
+    .ourprocesses h4{
+        border-bottom: 3px solid rgb(161, 65, 65);
+        margin-top:1rem;
+        
+    }
+    .ourprocesses{
+        margin-bottom: 2rem;
+    }
+    .float-end{
+        display: none;
+    }
+    #cp{
+        font-size:1.2rem
+    }
+  }
+
+  @media (max-width:640px){
+    .topper{
+        display:none;
+    }
+    .logo-resize{
+        width: 500px;
+    }
+    header{
+        margin-top:10px;
+    }
+
+  }
+  @media (max-width:400px){
+   .none{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left:2rem;
+   }
+   .notnone{
+    display: none;
+   }
+   .navbar-brand{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+  }

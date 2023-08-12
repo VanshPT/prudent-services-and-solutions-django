@@ -53,7 +53,7 @@
 <section id="sec2">
     <span><strong>Applying for: </strong>{{job}}</span>
     <form method="post" enctype="multipart/form-data" action="/pssapp/getback/">{% csrf_token %} 
-
+        <input type="hidden" name="JobName" value="{{job}}">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
             <input type="text" class="form-control" id="name" name="Name" required>

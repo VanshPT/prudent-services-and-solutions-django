@@ -1,6 +1,9 @@
 {% extends 'pssapp/basic.html' %}
 {% block title %}Our Process | Prudent Processes and Solutions{% endblock %}
 {% block css %}
+body{
+    box-sizing:border-box;
+}
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin-top: 6rem;
     margin-bottom: 0.5rem;
@@ -188,6 +191,175 @@
 }
 #sec11 p ul li {
     margin: 0.5rem 0;
+}
+@media (max-width:1320px){
+    
+    
+    #sec5{
+        margin-left:0rem;
+        marging-top:1rem;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:flex-start;
+    }
+    #sec5 h4{
+        marging-top:1rem;
+        color:rgb(57, 57, 120);
+        text-decoration:underline;
+        margin-left:2rem
+    }
+    #sec5 strong{
+        margin-top:2rem;
+    }
+    #sec5 img{
+        margin-left:0rem;
+        width:800px;
+    }
+
+
+    #sec6{
+        margin-left:0rem;
+        marging-top:1rem;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:flex-start;
+    }
+    #sec6 h4{
+        marging-top:1rem;
+        color:rgb(57, 57, 120);
+        text-decoration:underline;
+        margin-left:2rem
+    }
+    #sec6 strong{
+        margin-top:2rem;
+    }
+    #sec6 img{
+        max-height:400px;
+        margin-left:2rem;
+    }
+
+
+
+    #sec7{
+        margin-left:0rem;
+        marging-top:1rem;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:flex-start;
+    }
+    #sec7 h4{
+        marging-top:1rem;
+        color:rgb(57, 57, 120);
+        text-decoration:underline;
+        margin-left:2rem
+    }
+    #sec7 strong{
+        margin-top:2rem;
+    }
+    #sec7 img{
+        max-height:400px;
+        margin-left:2rem;
+    }
+
+
+    #sec10{
+        margin-left:0rem;
+        marging-top:1rem;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:flex-start;
+    }
+    #sec10 h4{
+        marging-top:1rem;
+        color:rgb(57, 57, 120);
+        text-decoration:underline;
+        margin-left:2rem
+    }
+    #sec10 strong{
+        margin-top:2rem;
+    }
+    #sec10 img{
+        max-height:400px;
+        margin-left:2rem;
+    }
+}
+@media (max-width:800px){
+    #sec2{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+    #sec2 img{
+        width:350px;
+    }
+    #sec3{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+    #sec3 img{
+        width:350px;
+    }
+    #sec4{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+    #sec4 img{
+        width:350px;
+    }
+    #sec5 img{
+        max-height:400px;
+        margin-left:0rem;
+    }
+    #sec6 img{
+        max-height:300px;
+        margin-left:2rem;
+    }
+    #sec7 img{
+        max-height:300px;
+        margin-left:2rem;
+    }
+    #sec10 img{
+        max-height:300px;
+        margin-left:2rem;
+    }
+}
+@media (max-width:625px){
+    #sec2{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+    #sec2 img{
+        width:250px;
+    }
+    #sec3{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+    #sec3 img{
+        width:250px;
+    }
+    #sec4{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+    #sec4 img{
+        width:250px;
+    }
 }
 {% endblock %}
 {% block body %}
