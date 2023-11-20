@@ -7,7 +7,15 @@
 
     <!-- Bootstrap CSS -->
     {% load static %}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<!-- Bootstrap JavaScript and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,16 +33,18 @@
         <div class="topper">
             <div class="d-flex topbx">
                 <i class="fa-sharp fa-solid fa-phone fa-shake iconchange"></i>
-                <span>+91 88669 09592</span>
+                <span><a class="phone-number" href="tel:+918866909592">+91 88669 09592</a></span>
             </div>
+            
             <div class="d-flex topbx">
                 <i class="fa-sharp fa-solid fa-phone fa-shake iconchange"></i>
-                <span>+91 261 461 9370</span>
+                <span><a class="phone-number" href="tel:+912614619370">+91 261 461 9370</a></span>
             </div>
             <div class="d-flex topbx">
                 <i class="fa-sharp fa-solid fa-envelope iconchange"></i>
-                <span>info@prudentservices.co.in</span>
+                <span><a class="phone-number" href="mailto:info@prudentservices.co.in">info@prudentservices.co.in</a></span>
             </div>
+            
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
             <div class="container-fluid">
@@ -44,44 +54,47 @@
               </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            </button>
+            
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav navspacing">
-                  <li class="nav-item it">
-                    <a class="nav-link" aria-current="page" href="/pssapp">Home</a>
-                  </li>
-                  <li class="nav-item it">
-                    <a class="nav-link" href="/pssapp/about/">About Us</a>
-                  </li>
-                  <li class="nav-item it dropdown">
-                    <a class="nav-link" href="/pssapp/ourprocesses">Our Processes</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item lower-border" href="/pssapp/ourprocesses#sec2">Man Guarding</a></li>
-                      <li><a class="dropdown-item lower-border" href="/pssapp/ourprocesses#sec3">Training & Rewards</a></li>
-                      <li><a class="dropdown-item lower-border" href="/pssapp/ourprocesses#sec4">Health & Safety</a></li>
-                      <li><a class="dropdown-item lower-border" href="/pssapp/ourprocesses#sec5">Guiding Principles</a></li>
-                      <li><a class="dropdown-item lower-border" href="/pssapp/ourprocesses#sec6">Operational Processes</a></li>
-                      <li><a class="dropdown-item lower-border" href="/pssapp/ourprocesses#sec7">Review Process</a></li>
-                      <li><a class="dropdown-item lower-border" href="/pssapp/ourprocesses#sec8">Statutory Compliances</a></li>
-                      <li><a class="dropdown-item lower-border" href="/pssapp/ourprocesses#sec9">Compliances Adherence</a></li>
-                      <li><a class="dropdown-item lower-border" href="/pssapp/ourprocesses#sec10">Value Added Services</a></li>
-                      <li><a class="dropdown-item lower-border" href="/pssapp/ourprocesses#sec11">Service Level Agreement</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item it">
-                    <a class="nav-link" href="/pssapp/valuedpartners/">Valued Partners</a>
-                  </li>
-                  <li class="nav-item it">
-                    <a class="nav-link" href="/pssapp/contact/">Contact Us</a>
-                  </li>
-                  <li class="nav-item it">
-                    <a class="nav-link" href="/pssapp/careers/">Careers</a>
-                  </li>
-                  <li class="nav-item it">
-                    <a class="nav-link" href="/admin" target="_blank">Employee Login</a>
-                  </li>
+                    <li class="nav-item it">
+                        <a class="nav-link" href="{% url 'PssappIndex' %}" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item it">
+                        <a class="nav-link" href="{% url 'AboutUs' %}">About Us</a>
+                    </li>
+                    <li class="nav-item it dropdown">
+                        <a class="nav-link" href="{% url 'OurProcesses' %}">Our Processes</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item lower-border" href="{% url 'OurProcesses' %}#sec2">Man Guarding</a></li>
+                            <li><a class="dropdown-item lower-border" href="{% url 'OurProcesses' %}#sec3">Training & Rewards</a></li>
+                            <li><a class="dropdown-item lower-border" href="{% url 'OurProcesses' %}#sec4">Health & Safety</a></li>
+                            <li><a class="dropdown-item lower-border" href="{% url 'OurProcesses' %}#sec5">Guiding Principles</a></li>
+                            <li><a class="dropdown-item lower-border" href="{% url 'OurProcesses' %}#sec6">Operational Processes</a></li>
+                            <li><a class="dropdown-item lower-border" href="{% url 'OurProcesses' %}#sec7">Review Process</a></li>
+                            <li><a class="dropdown-item lower-border" href="{% url 'OurProcesses' %}#sec8">Statutory Compliances</a></li>
+                            <li><a class="dropdown-item lower-border" href="{% url 'OurProcesses' %}#sec9">Compliances Adherence</a></li>
+                            <li><a class="dropdown-item lower-border" href="{% url 'OurProcesses' %}#sec10">Value Added Services</a></li>
+                            <li><a class="dropdown-item lower-border" href="{% url 'OurProcesses' %}#sec11">Service Level Agreement</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item it">
+                        <a class="nav-link" href="{% url 'ValuedPartners' %}">Valued Partners</a>
+                    </li>
+                    <li class="nav-item it">
+                        <a class="nav-link" href="{% url 'ContactUs' %}">Contact Us</a>
+                    </li>
+                    <li class="nav-item it">
+                        <a class="nav-link" href="{% url 'Careers' %}">Careers</a>
+                    </li>
+                    <li class="nav-item it">
+                        <a class="nav-link" href="/admin" target="_blank">Employee Login</a>
+                    </li>
                 </ul>
-              </div>
+            </div>
+            
             </div>
           </nav>
     </header>
@@ -105,18 +118,19 @@
       <div class="getintouch">
           <h4>Get in Touch</h4>
           <div>
-              <i class="fa-sharp fa-solid fa-address-book"></i>
-              <a href="" class="linkstyle">408,The Galleria Shopping Hub, Opposite Pal RTO, Near Sanjeev Kumar Auditorium, Adajan, Surat, Gujarat, India-395009</a>
-          </div>
-          <div>
-              <i class="fa-sharp fa-solid fa-phone"></i>
-              <a href="" class="linkstyle">+91 88669 09592</a>
-              <a href="" class="linkstyle">+91 261 461 9370</a>
-          </div>
-          <div>
-              <i class="fa-sharp fa-solid fa-envelope"></i>
-              <a href="" class="linkstyle">info@prudentservices.co.in</a>
-          </div>
+            <i class="fa-sharp fa-solid fa-address-book"></i>
+            <a href="https://maps.google.com/?q=408,The Galleria Shopping Hub, Opposite Pal RTO, Near Sanjeev Kumar Auditorium, Adajan, Surat, Gujarat, India-395009" class="linkstyle" target="_blank">408, The Galleria Shopping Hub, Opposite Pal RTO, Near Sanjeev Kumar Auditorium, Adajan, Surat, Gujarat, India-395009</a>
+        </div>
+        <div>
+            <i class="fa-sharp fa-solid fa-phone"></i>
+            <a href="tel:+918866909592" class="linkstyle">+91 88669 09592</a>
+            <a href="tel:+912614619370" class="linkstyle">+91 261 461 9370</a>
+        </div>
+        <div>
+            <i class="fa-sharp fa-solid fa-envelope"></i>
+            <a href="mailto:info@prudentservices.co.in" class="linkstyle">info@prudentservices.co.in</a>
+        </div>
+        
           <div class="normbut">
               <Button id="GoToContactButton">Get In Touch</Button>
           </div>
@@ -124,24 +138,25 @@
   </div>
 
     <div class="foot2 container">
-      <p class="float-end"><a href="/pssapp" class="linkstyle">Back to Home</a></p>
+      <p class=""><a href="/pssapp" class="linkstyle">Back to Home</a></p>
       <p id="cp">© 2017-2021 Prudent Services and Solutions, Inc. · <a href="#" class>Privacy</a> · <a href="#">Terms</a></p>
   </div>
 </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script src="{%static 'js/basic.js'%}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js"></script>
+     -->
+    <!-- Your custom JavaScript -->
+    <script src="{% static 'js/basic.js' %}"></script>
 
     <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script> -->
+   
     <script>
         {% block js %}
 
