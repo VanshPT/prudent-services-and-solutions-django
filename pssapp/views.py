@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Contacts,JobDetail,JobEntry,JobApplications
+from .models import Contacts, JobDetail, JobEntry, JobApplications
+from django.http import JsonResponse
+
 # Create your views here.
 def index(request):
     return render(request,"pssapp/index.html")
@@ -52,4 +54,6 @@ def jobseeker(request):
         job=request.POST.get('jobname','')
         params={'job':job}
     return render(request,'pssapp/jobseekerform.html',params)
+
+
 

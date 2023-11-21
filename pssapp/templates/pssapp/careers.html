@@ -184,7 +184,7 @@
         <div class="card">
             <h4>{{i.job_name}}</h4>
             <p><strong>Location: </strong>{{i.place}}</p>
-            <form action="/pssapp/jobappliction/" method="post">{% csrf_token %}
+            <form action="/pssapp/jobapplication/" method="post">{% csrf_token %}
                 <input type="hidden" name="jobname" value="{{i.job_name}}" >
                 <button type="submit" class="details-button">Fill Application</button>
             </form>
@@ -220,5 +220,5 @@ function typeEffect() {
     }
 }
 
-var typingInterval = setInterval(typeEffect, 100); 
+var typingInterval = setInterval(typeEffect, 100);
 {% endblock %}

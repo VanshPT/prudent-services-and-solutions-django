@@ -75,6 +75,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: left;
+    margin-left:10rem;
 }
 .getintouch {
     margin-left: 1rem;
@@ -124,7 +125,7 @@ footer{
     top: 0;
     z-index: 1020;
 }
-@media (max-width:768px){
+@media (max-width:810px){
     #foot1{
         font-size:1.2rem;
         display: flex;
@@ -141,6 +142,7 @@ footer{
     }
     .ourprocesses{
         margin-bottom: 2rem;
+        margin-left:3rem;
     }
     .float-end{
         display: none;
@@ -148,8 +150,7 @@ footer{
     #cp{
         font-size:1.2rem
     }
-  }
-
+}
   @media (max-width:640px){
     .topper{
         display:none;
@@ -162,6 +163,15 @@ footer{
     }
 
   }
+  @media (max-width:490px){
+    #foot1{
+        display:none;
+    }
+    .foot2{
+        flex-direction: column;
+        
+    }
+  }
   @media (max-width:400px){
    .none{
     display: flex;
@@ -170,6 +180,10 @@ footer{
     align-items: center;
     margin-left:2rem;
    }
+   #sec2 img {
+    width: 300px;
+    padding: 0rem;
+}
    .notnone{
     display: none;
    }
@@ -202,4 +216,8 @@ footer{
 .phone-number:hover {
     text-decoration: underline;
     color:yellow;
+}
+.map a{
+    display: block;
+    width:400px;
 }
